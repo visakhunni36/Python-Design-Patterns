@@ -1,5 +1,3 @@
-
-
 # the command pattern 
 
 
@@ -75,109 +73,16 @@ class Customer:
 
 	def order(self, cmd):
 		cmd = cmd.strip().upper()
+		print(cmd)
+
 		try:
-			if cmd == "CONFIRM":
-				self.__placeOrder()
-			elif cmd == "CANCEL":
-				self.__cancelOrder()
+			if cmd == 'CONFIRM':
+				self.__placeOrder.execute()
+			elif cmd == 'CANCEL':
+				self.__cancelOrder.execute()
 			else:
 				print('Invalid COMMAND, Please Enter CONFIRM or CANCEL')
-		except Exception, msg:
-			print('Exception occured : %s' %msg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		except Exception as e:
+			print('Exception')
+		
+		
