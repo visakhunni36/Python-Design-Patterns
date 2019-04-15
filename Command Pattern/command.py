@@ -83,6 +83,6 @@ class Customer:
 			else:
 				print('Invalid COMMAND, Please Enter CONFIRM or CANCEL')
 		except Exception as e:
-			print('Exception')
+			print('Exception Occured : %s' %e)
 		
 		
