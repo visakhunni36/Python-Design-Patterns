@@ -23,11 +23,11 @@ class Publisher:
 
 class EmailCampaign(Publisher):
     def __init__(self):
-        self.listOfClients = []
+        self._listOfClients = []
         self.emailSubject = None
         
     def register(self, clientObj):
-        if clientObj not in listOfClients:
+        if clientObj not in self._listOfClients:
             self._listOfClients.append(clientObj)
 
     def unregister(self, clientObj):
@@ -72,6 +72,9 @@ class MarketingAgencies(Subscriber):
     def sendMail(self, emailSubject):
         for agency in self._marketingAgencies:
             print('A new mail %s is send to Marketing %s' %(emailSubject, agency))
+        
+
+
         
 
 
