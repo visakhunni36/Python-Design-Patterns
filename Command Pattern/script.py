@@ -6,7 +6,7 @@ import command
 
 
 # create the client object
-user = Customer()
+user = command.Customer()
 
 # invoke the place order command
 print('Place Order Test')
