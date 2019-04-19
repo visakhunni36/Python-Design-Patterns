@@ -30,7 +30,7 @@ class TC:
 			print('Test not executed. No tear down required')
 
 	def setTM(self, tm):
-		self.tm = tm
+		self._tm = tm
 		
 	def setProblem(self, value):
 		self._bProblem = value
@@ -49,7 +49,7 @@ class Reporter:
 		print('Reporting the results of the Test')
 		time.sleep(1)
 		
-	def setTM(self):
+	def setTM(self, tm):
 		self._tm = tm
 		
 
@@ -86,6 +86,8 @@ class TestManager:
 		if rvalue == -1:
 			self._tc.setProblem(1)
 			self._reporter.prepare()
+		else:
+			self._tc.setProblem(0)
 
 	def setReporter(self, reporter):
 		self._reporter = reporter
@@ -99,6 +101,16 @@ class TestManager:
 
 	def setTC(self, tc):
 		self._tc = tc
+
+
+
+
+
+
+
+
+
+
 		
 
 
@@ -108,6 +120,7 @@ class TestManager:
 
 
 
+		
 
 
 
@@ -116,6 +129,7 @@ class TestManager:
 
 
 
+		
 
 
 
@@ -124,6 +138,7 @@ class TestManager:
 
 
 
+		
 
 
 
@@ -132,6 +147,7 @@ class TestManager:
 
 
 
+		
 
 
 
@@ -140,6 +156,7 @@ class TestManager:
 
 
 
+		
 
 
 
@@ -148,235 +165,4 @@ class TestManager:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
